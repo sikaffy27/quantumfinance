@@ -13,8 +13,7 @@ prefooter_cta_text: Ready to start your crypto journey? <br> Book a consultation
 include_footer: true
 
 ---
-
-{{% content-image "/images/image_3.jpeg" "This is an image" "reverse" %}} 
+{{% content-image "/images/image_3.jpeg" "This is an image" "reverse" %}}
 
 Quantum Finance offers <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">comprehensive consultations</a>  for individuals as well as small groups, businesses and institutions. We have an experienced team that can mentor you and provide a wide range of services
 
@@ -22,5 +21,4 @@ Consultations are centered around the specific needs of every customer and can a
 
 We also have an investing and trading course for those who want to focus more on higher frequency day trading. We will  show you essential security strategies to keep your funds safe and avoid scams. Consultations will be carried out online using zoom/skype or any video conference platform of your choice.
 
-### Price: $45/hour
 {{% /content-image %}}
