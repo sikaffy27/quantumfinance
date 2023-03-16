@@ -5,7 +5,7 @@ enable_prefooter_default_content = true
 include_footer = true
 prefooter_button_cta = "Learn you can make passive income by using our hotspots"
 prefooter_button_link = "/#contact"
-prefooter_cta_text = "start mining today!"
+prefooter_cta_text = "Start mining today!"
 title = "Start a crypto mining operation"
 url = "/miningsetupservice/"
 
@@ -45,4 +45,3 @@ Chia is less energy intensive and more sustainable than more traditional forms o
 ***
 
 {{% /content-image %}}
-
