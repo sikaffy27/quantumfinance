@@ -1,0 +1,36 @@
+{{- $section1 := .Site.Params.section1 }}
+{{- $title    := index $section1 "title" }}
+{{- $subtitle := index $section1 "subtitle" }}
+{{- $tiles    := index $section1 "tiles" }}
+<section id="get-started" class="section section-feature-grey-dark is-medium">
+  <div class="container-fluid">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-uppercase is-size-3-mobile txt-white is-2">{{ $title }}</h2>
+      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns card-flow">
+        {{- range $tiles }}
+        <div class="column ">
+          <div class="bg-black feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-title">
+              <h4 class="txt-white">{{ .title }}</h4>
+            </div>
+            <!-- <div class="card-icon">
+                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
+            </div> -->
+            <div class="card-text">
+                <p>{{ .text }}</p>
+            </div>
+            <div class="card-action">
+              <a href="{{ .url }}" class="is-rounded txt-black button btn-align-md accent-btn raised">{{ .buttonText }}</a>
+            </div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>

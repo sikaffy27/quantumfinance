@@ -1,0 +1,325 @@
+---
+baseURL: "/"
+languageCode: en-us
+title: Quantum Finance | Web3 Education and Project Development
+googleAnalytics: 
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  whatsapp:
+    script: '<script src="https://apps.elfsight.com/p/platform.js" defer></script> '
+    div: <div class="elfsight-app-7956b457-4b95-4239-bd42-9ea587a1ca00"></div>
+  openGraph: true
+  description: crypto consulting and cryptocurrency education. Make money from your
+    computer!
+  navbarlogo:
+    text: quantum finance
+    image: "/logos/qa-wide.png"
+    link: "/"
+  font:
+    name: Space Grotesk
+    sizes:
+    - '430'
+    - '630'
+  hero:
+    title: Quantum Finance
+    subtitle: Web3 education & project development
+    buttontext: Start your web3 journey
+    buttonlink: "#Start-your-web3-journey!"
+    image: "/image_10.jpeg"
+    clientlogos:
+    - bitcoin
+    - ethereum
+    - iota777
+    - binance
+    - cardano
+    - chainlink
+    - xrp
+  navbar:
+  - title: DeFi Education
+    url: "/cryptocurrency-investing-course"
+  - title: Web3 Consultation
+    url: "/consultation-services"
+  - title: NFT Onboarding
+    url: "/nft-onboarding"
+  - title: 'Cryptocurrency Mining '
+    url: "/miningsetupservice/"
+  - title: Tech Consulting
+    url: "/advanced-technologies-consulting"
+  section1:
+    title: Financial Literacy 2.0
+    subtitle: The tools make the master
+    tiles:
+    - title: Crypto mining setup
+      icon: ''
+      text: Set up a significant passive income source by contributing to network
+        security
+      url: https://www.quantumfinance.consulting/miningsetupservice/
+      buttonText: learn more
+    - title: Crypto Consultation service
+      icon: laptop-cloud
+      text: 1 on 1 sessions can address topics like how to buy an NFT, recover a lost
+        wallet or deploy a smart contract.
+      url: "/consultation-services"
+      buttonText: Learn More
+    - title: Web3 Investing course
+      icon: plug-cloud
+      text: 'We offer a cryptocurrency investing course for individuals or groups
+        who want to learn about investing & trading crypto '
+      url: "/cryptocurrency-investing-course"
+      buttonText: Learn More
+    - title: 'NFT Onboarding '
+      icon: mouse-globe
+      text: 'Our turnkey NFT minting service helps artists bring their valuable art
+        into the world of crypto as an NFT. Our team will help you mint, market and
+        monetize your art. '
+      url: "/nft-onboarding"
+      buttonText: Learn More
+    - title: 'Tech Consulting '
+      icon: mouse-globe
+      text: We specialize in advanced technologies, including cyber security, cloud
+        application management, supply chain management, IT, and all things Blockchain.
+      url: "/technology-consulting"
+      buttonText: consult
+  section2:
+    title: You're here because you want the best guidance possible
+    subtitle: 'shorten your Web3 learning curve '
+    features:
+    - title: DeFi mastery course
+      text: 'Quantum Finance offers a cryptocurrency investing course for individuals
+        or groups who want to learn about investing in cryptocurrencies. We teach
+        you how to effectively invest on the market and what strategies to use in
+        order to profit in the lucrative world of cryptocurrencies. What makes us
+        unique is the quality of people that make up our team. We put a premium on
+        personalized, dedicated and patient guidance. We will provide you with all
+        the requisite tools to attain financial literacy in the cryptocurrency industry,
+        from research material and trading methodology to Key Management, where the
+        fast food model of weak passwords over insecure protocols falls away as operators
+        come to understand secure key management. We teach you strategies that will
+        enable you to profit consistently and invest from the comfort of your home.
+        We will pair you up with a mentor that will hold your hand through your educational
+        journey in crypto investing. The course will teach you how to invest in bitcoin
+        and other cryptocurrencies like Ethereum, Polygon, IOTA, Cardano, XRP, and
+        off course a comprehensive guide to trading NFTs. NFTs will drive our society
+        to a virtual non-fungible state and we will teach you how to profit in the
+        crypto art space by collecting valuable/rare crypto art and even creating
+        your own NFT marketplace. Finally, we tackle the the world of virtual real
+        estate and show you how to trade virtual land as well as how to how to rent
+        it out and make passive income using your virtual estate. '
+      icon: doc-sync
+      bullets:
+      - Invest in bitcoin and other cryptocurrencies like Ethereum, Dogecoin, Shiba,
+        Monero, IOTA, Z-cash
+      - How to use DeFi instruments such as Metamask, Uniswap, Lending platforms,
+        masternodes, yield farming, staking and other forms of passive income
+      - creation, handling and storing of secure wallets and multi-signature schemes.
+      - How you can invest in other altcoins that will yield a higher ROI and can
+        make you wealthier than bitcoin
+      - invest in bitcoin and other cryptocurrencies like Ethereum, Dogecoin, Shiba,
+        Monero, IOTA, Z-cash
+      - collecting valuable/rare crypto art and even creating your own NFT crypto
+        art.
+      - how Augmented reality combines with NFT's and how they can make you wealthy.
+    - title: Web3 Consultation
+      bullets:
+      - Centered around the specific needs of every customer
+      - Cold storage using setup and best practices
+      - Backup and recovery plans for assets
+      - Patient and dedicated cryptocurrency mentors that care about your development
+        in the space
+      - learn the basics of blockchain fundamentals and how they will transform the
+        supply chain and medical industry
+      - how to mine Bitcoin, Ethereum and Z-cash
+      - private key and seed recovery services
+      text: Quantum Finance offers consultation services for those who have specific
+        issues related to cryptocurrencies. We have a team that is knowledgeable on
+        the latest cryptocurrency developments, is keenly aware of opportunities in
+        the crypto space and can mentor you and show you how to use essential DeFi
+        tools to operate effectively in the cryptocurrency space. (Decentralized Finance
+        ) Our consultation services offer a flexible but structured approach to online
+        learning where we put a premium on personalized, dedicated and patient guidance.
+        We will provide you with the requisite tools to attain financial literacy
+        in the cryptocurrency industry and we will teach you strategies that will
+        enable you to profit consistently and invest from the comfort of your computer.
+        We are equipped with a team that has a rare blend of technical expertise,
+        economic and investment literacy as well as the passion and dedication to
+        teach about cryptocurrencies. Our skills and experience  allow us to deliver
+        premium consulting services and help our clients reach their cryptocurrency
+        goals.
+      icon: laptop-globe
+    - title: NFT development
+      text: When you mint an NFT you write your work onto the blockchain forever and
+        nobody can ever change that. your songs, visual art, pictures, 3D items and
+        even memes are transposed onto the internet using immutable and unfalsifiable
+        code. Minting an NFT requires resources, access to infrastructure as well
+        as careful planning. We provide the artists with all the tools to mint their
+        NFT’s, but also the  community,  curation, the event space and resources in
+        order to support their career. We aim to support artists across the world,
+        as well as build a strong community of creative content producers that facilitates
+        monetization, collaboration and the expansion of their art.
+      icon: mobile-feed
+      bullets:
+      - transpose their works of art onto the blockchain and thus bridge the gap between
+        the physical and digital world
+      - avoid NFT minting costs (gas fees) as well as marketing and development costs
+      - gain access to a close knit artist community and collaboration network
+      - leverage quantum finance’s team’s expertise in business development and marketing
+        to maximize your works monetization potential
+      - build a strong community of creative content producers that facilitates monetization,
+        collaboration and the expansion of their art
+      - get listed on the most exclusive NFT collectible marketplaces
+      - support art and help build the support network for artists accross the globe
+    - title: Advanced Technologies Consulting
+      text: 'Our Approach explained: We Consult. We listen to understand your goals,
+        we partner and align on building your path to success. Our clients have bespoke
+        strategic and/or technology goals. We will pair your business with best resource
+        for your particular project or situation. Our goal is to help you find the
+        right strategies to create a network effect and accelerate your project''s
+        development by identifying the "job to be done". We specialize in advanced
+        technologies, including cyber security, cloud application management, supply
+        chain management, IT, and all things Blockchain.'
+      icon: doc-sync
+      bullets: []
+  section3:
+    title: One platform
+    subtitle: To rule them all
+    image: illustrations/mockups/app-mockup.png
+    buttonText: Get started
+    buttonLink: "#"
+  section4:
+    title: Testimonials
+    subtitle: take a look at what our clients have to say
+    clients:
+    - name: Patrick Kennedy
+      quote: Their hand on web3 course and access to academic material allowed me
+        learn on the fly and start trading and making money from the comfort of my
+        own home.
+      job: Investor
+      img: "/images/pk.jpg"
+    - name: Mary Fazzini
+      quote: I contacted Quantum Finance to tutor me in cryptocurrency trading. My
+        instructor, Mario, was very patient informative and professional and I highly
+        recommend him as his knowledge and expertise has really helped me gain a better
+        understanding. He really cares and wants to see me succeed and I am very grateful
+        to have found such a great tutor and cryptocurrency service
+      job: Financial Analyst
+      img: mary
+    - name: Joe Flannery
+      quote: Quantum Finance made my introduction to cryptocurrency investing simple
+        and seem less. they’re knowledgeable, thoughtful and competent. Thanks to
+        my crypto mentor, Mario, I’ve been able to multiply my investments and just
+        as importantly, learn a tremendous amount about the cryptocurrency ecosystem
+      job: Washington DC
+      img: "/images/testimonial/joe.jpg"
+  quotes:
+    title: Memorable Quotes
+    clients:
+    - name: Andreas M. Antonopoulos
+      quote: There are a billion people, right now, with access to the internet and
+        feature phones who could use bitcoin as an international wire-transfer service
+      job: The Internet of Money
+    - name: Marc Cuban
+      quote: The simplification of smart contracts on the Ethereum blockchain, Cuban
+        said, is "what gets me excited. Because now, all these SaaS companies, all
+        these different companies, I could see just disrupting the fuck out of them.
+      job: Dallas Mavericks owner; billionaire entrepreneur
+    - name: Ray Dalio
+      quote: Personally, I’d rather have bitcoin than a bond
+      job: Bridgewater Associates; billionaire investor
+  section5: true
+  form:
+    interest:
+      title: I am interested in ?
+      options:
+      - 'Trading and portfolio building '
+      - DeFi mastery course
+      - NFT Onboarding
+      - Consulting
+      - DAO implementation
+      - Others
+  team:
+    title: Our Team
+    members:
+    - name: David P. Lopez
+      image: "/images/david.jpg"
+      credential: 'Full-stack software engineer '
+      university: ''
+      location: ''
+      description: 'David is a Sr. Automation Architect and Sr. Software Engineer
+        with enterprise experience deploying apps, services, and Machine Learning
+        tools on Amazon Web Services (AWS). David has vast experience with solidity
+        development, already having created and deployed Decentralised exchanges,
+        NFT marketplaces, as well as plenty of crypto-to-fiat merchant gateways in
+        order to facilitate user onboarding through simple credit card payments. He''s
+        an experienced professional with many startup successes and is able to help
+        you automate your workflow and adapt to the changing market conditions that
+        new tech primitives like blockchain, smart contracts, DAOs, and NFTs have
+        brought to our economy. '
+    - name: James Wei
+      image: "/images/jamesweii.jpg"
+      credential: BS, Computer Science
+      university: Nagoya University
+      location: Nagoya, Japan
+      description: 'James is a reliable, passionate, self-driven developer, who has
+        a strong background in front end development and 10+ years of experience in
+        Blockchain and crypto-economic networks  He has has extensive experience in
+        helping develop start-ups as well as a successful track record in DeFi; deploying
+        AMMS (automated market makers) NFT collections, as well as DAOs. His blend
+        of front end and back end expertise as well as his advanced communication
+        skills allow him to fulfill any requirements that are needed for a blockchain
+        project. He is currently focused on building sustainable DAO communities through
+        the use of risk adjusted bonding curves (RABC) and is working on multiple
+        implementations of economic systems engineering which will be deployed on
+        ETH layer 2 as well as on the IOTA network.  '
+    - name: Robert Carden
+      image: "/images/robertcarden.jpg"
+      credential: BS, Computer Science
+      university: 'Cornell University '
+      location: Ithaca, New York
+      description: "Robert is a full-stack blockchain developer with a passion for
+        building scalable and secure web3 blockchain applications.  He has 6 years
+        of experience in the crypto space building DApps, Wallets, Smart Contracts,
+        DAOs, ERC tokens as well as NFT marketplaces.  His expertise include Solidity,
+        Cairo, Rust and Python which he identifies as fundamental primitives towards
+        scaling DeFi and advancing our financial ecosystem towards complete decentralization
+        and sustainability.  Robert has a passion for dynamic, adaptive and multi-scale
+        crypto-economic systems which has led him to specialize Implementable Tools
+        to Extend DAO Interaction Patterns. \n\nhttps://www.linkedin.com/in/robert-carden/\n
+        \                                          \n                                               "
+  footer:
+    logo: qa-wide.png
+    socialmediatitle: Follow Us
+    socialmedia:
+    - link: https://medium.com/@quantumfinance
+      icon: 'medium'
+    - link: https://t.me/fixpoint
+      icon: 'telegram'
+    - link: https://github.com/crazydevlegend
+      icon: 'github'
+    bulmalogo: false
+    quicklinks:
+      column1:
+        title: Our Services
+        links:
+        - text: NFT Onboarding
+          link: "/nft-onboarding"
+        - text: Consultation
+          link: "/consultation-services"
+        - text: Cryptocurrency Course
+          link: "/cryptocurrency-investing-course"
+      column2:
+        title: ''
+        links:
+        - text: Contact Us
+          link: "/#contact"
+        - text: 
+          link: 
+        - text: 
+          link: 
+        - text: 
+          link: 

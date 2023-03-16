@@ -1,0 +1,31 @@
+{{- $quotes := .Site.Params.quotes }}
+{{- $title    := index $quotes "title" }}
+{{- $subtitle := index $quotes "subtitle" }}
+{{- $clients  := index $quotes "clients" }}
+<section class="section section-light-grey">
+  <div class="container">
+
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2 has-text-black is-spaced">{{ $title }}</h2>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns is-vcentered">
+        {{- range $clients }}
+        <div class="column is-4">
+          <figure class="quotes">
+            <blockquote>
+              {{ .quote }}
+            </blockquote>
+            <div class="author">
+              <h5>{{ .name }}</h5>
+              <span class="has-text-black">{{ .job }}</span>
+            </div>
+          </figure>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>

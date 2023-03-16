@@ -1,0 +1,42 @@
+{{$interestTitle := .Site.Params.form.interest.title}}
+{{$interest := .Site.Params.form.interest.options}}
+<section id="contact" class="section section-feature-grey-dark is-medium">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="txt-white title is-2 is-spaced">Drop us a line or two </h2>
+      <h3 class="subtitle is-5 is-muted">We'd love to hear from you</h3>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns">
+        <div class="column is-12 ">
+          <form name="quantum-finance" netlify>
+            <div class="columns is-multiline">
+              <div class="column is-6">
+                <input name="name" required class="input" type="text" placeholder="Name">
+              </div>
+              <div class="column is-6">
+                <input name="email" required class="input" type="email" placeholder="Email Address">
+              </div>              
+              <div class="column is-flex">
+                <select required class="selectPrompt column" name="purpose">
+                  <option id="" value="" class="options column">{{$interestTitle}}</option>
+                  {{ range $interest}}
+                   <option value="{{.}}">{{.}}</option>
+                  {{end}}
+                </select>
+              </div>
+              <div class="column is-12">
+                <textarea name="message" required class="textarea" rows="10" placeholder="Write someting..."></textarea>
+              </div>
+              <div class="form-footer has-text-centered mt-10">
+                <button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

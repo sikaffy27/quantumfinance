@@ -1,0 +1,44 @@
+{{- $hero       := .Site.Params.hero }}
+{{- $title      := index $hero "title" }}
+{{- $subtitle   := index $hero "subtitle" }}
+{{- $buttonText := index $hero "buttontext" }}
+{{- $buttonLink := index $hero "buttonlink" }}
+{{- $image      := index $hero "image" }}
+<div class="hero-body" style="background: url('/images/banner.jpg')center top; background-size:cover; background-repeat: no-repeat;">
+  <div class="banner-overlay">
+    <div class="container height-100">
+      <div class="columns is-vcentered height-100">
+        <div class="column landing-caption">
+          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced">
+            {{ $title }}
+          </h1>
+          {{ with $subtitle }}
+          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted">
+            {{ . }}
+          </h2>
+          {{ end }}
+          <p>
+            <a class="button is-rounded cta primary-btn raised bg-green"href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
+              {{ $buttonText }}
+            </a>
+            
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <!-- Calendly link widget end -->
+          </p>
+        </div>
+        <div class="column is-5 ">
+          <figure class="illustration is-flex">
+            <div class="illustration-box is-flex-direction-column">
+              <!-- <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description"> -->
+              <!-- <div style="font-size: 0.5rem; width: 150px; word-wrap: break-word;">
+                Illustration by <a style="color: inherit;" href="https://icons8.com/illustrations/author/60872b904391d1000c87ab70">Marina Mogulskaya</a> from <a style="color: inherit;" href="https://icons8.com/illustrations">Ouch!</a>
+              </div> -->
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

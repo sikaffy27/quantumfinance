@@ -1,0 +1,95 @@
+{{ define "main" }}
+    {{ if .Site.Params.hero }}
+    {{ partial "hero.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section1 }}
+    {{ partial "section1.html" . }}
+    {{ end }}
+    
+    {{ if .Site.Params.section2 }}
+    {{ partial "section2.html" . }}
+    {{ end }}
+
+    {{/* if .Site.Params.section3 */}}
+    {{/* partial "section3.html" . */}}
+    {{/* end */}}
+
+    {{ if .Site.Params.team }}
+    {{ partial "team.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section4 }}
+    {{ partial "section4.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.quotes }}
+    {{ partial "quotes.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section5 }}
+    {{ partial "section5.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
+
+    <div id="contact-pop-up">
+        <div class="box-holder">
+            <div class="box-inner">
+                <h2 class=" main-title has-text-centered">Unlock your Web3 potential</h2>
+                <a class="close-btn" href="javascript:void(0)" onclick="myFunction()"><i class="fa fa-times" aria-hidden="true"></i></a>
+                   <form name="quantum-finance" netlify>
+                    <div class="columns is-multiline">
+                    <div class="column is-6">
+                        <input name="name" required class="input" type="text" placeholder="Name">
+                    </div>
+                    <div class="column is-6">
+                        <input name="email" required class="input" type="email" placeholder="Email Address">
+                    </div>              
+                    <div class="column  is-12">
+                        <input name="phone-number" required class="input" type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </div>              
+                    <div class="column is-flex">
+                        <select required class="selectPrompt column" name="purpose">
+                        <option id="" value="" class="options column">{{ .Site.Params.form.interest.title }}</option>
+                        {{ range .Site.Params.form.interest.options }}
+                        <option value="{{.}}">{{.}}</option>
+                        {{end}}
+                        </select>
+                    </div>
+                    <div class="column is-12">
+                        <textarea name="message" required class="textarea" rows="10" placeholder="Write someting..."></textarea>
+                    </div>
+                    <div class="form-footer has-text-centered mt-10">
+                        <button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript">
+    window.onload=function(){
+    setTimeout(function(){
+        $("html").addClass("show-contact");
+    }, 8000);
+    }
+  // document.addEventListener( 'DOMContentLoaded', function (){
+  // });
+    function myFunction() {
+    var element = document.documentElement;
+    element.classList.remove("show-contact");
+    } 
+  </script> 
+  
+{{ end }}

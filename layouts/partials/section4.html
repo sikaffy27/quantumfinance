@@ -1,0 +1,44 @@
+{{- $section4 := .Site.Params.section4 }}
+{{- $title    := index $section4 "title" }}
+{{- $subtitle := index $section4 "subtitle" }}
+{{- $clients  := index $section4 "clients" }}
+<section class="section section-secondary">
+  <div class="container">
+
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2 has-text-black is-spaced">{{ $title }}</h2>
+      {{- with $subtitle }}
+      <h3 class="subtitle is-5 has-text-black">{{ . }}</h3>
+      {{- end }}
+    </div>
+
+    <div class="content-wrapper">
+      <div class="">
+        <section class="splide splide_two" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {{- range $clients }}
+              <li class="splide__slide">
+                <div class="mb-50">
+                  <figure class="testimonial">
+                    <blockquote>
+                      {{ .quote }}s
+                    </blockquote>
+                    <div class="author">
+                      <img src="{{ printf "/images/testimonial/%s.jpg" (string .img) | relURL }}" alt=""/>
+                      <div>
+                        <h5>{{ .name }}</h5>
+                        <span>{{ .job }}</span>
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+              </li>
+              {{- end }}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

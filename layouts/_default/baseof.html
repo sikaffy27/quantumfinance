@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+  </head>
+  <body class="">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+    {{ block "main" . }}
+    {{ end }}
+
+    <div id="schedule-meeting">
+        <!-- Calendly link widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;"><img src="/images/Zoom-emblem.png" alt=""> Schedule a DeFi consult! </a>
+        <!-- Calendly link widget end -->
+    </div>
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
+
+    {{ partial "javascript.html" . }}
+
+    <!-- whatsapp icon from elfsight -->
+    {{$whatsapp := .Site.Params.whatsapp  }}
+    {{if $whatsapp}}{{$whatsapp.div | safeHTML}}{{end}}
+
+
+    <script async="async" src="https://static.mobilemonkey.com/js/mm_4ddf331c-5c02-4ddc-8fa9-c35175ad3e90-13720368.js"></script>
+      <script>
+      window.mmDataLayer = window.mmDataLayer || [];
+      function mmData(o) { mmDataLayer.push(o); }
+      </script>
+  </body>
+</html>

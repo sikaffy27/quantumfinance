@@ -1,0 +1,40 @@
+{{- $team := .Site.Params.team }}
+{{- $title := index $team "title" }}
+{{- $members := index $team "members" }}
+
+<section class="team">
+    <h2 class="team-h2 is-size-2 is-size-3-mobile is-uppercase has-text-weight-bold has-text-centered">{{$title}}</h2>
+    <div class="divider is-centered"></div>
+    </br>
+    <div class="container">
+        <section class="splide splideOne" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                    {{range $members }} 
+                    <li class="splide__slide">
+                        <div class="team-unit is-flex is-justify-content-center my-6">            
+                            <div class="team-left">
+                                <div class="member-profile">
+                                    <img src="{{.image | relURL }}" alt="">
+                                </div>
+                                <h2 class="is-size-4 has-text-weight-bold">{{.name}}</h2>
+                                <p>{{.credential}}</p>
+                                <p>{{.university}}</p>
+                                <p class="t-location">{{.location}}</p>
+                            </div>
+                            
+                            <div class="team-right is-flex">            
+                                <div class="team-description ">            
+                                    <p>{{.description | safeHTML}}</p>
+                                </div>            
+                            </div>
+                        </div>  
+                        </li>
+                    {{end}}
+                  </ul>
+            </div>
+          </section>
+    </div>
+    
+</section>
+
