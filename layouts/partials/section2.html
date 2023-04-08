@@ -6,40 +6,13 @@
   
 <section class="section is-medium">
   <div class="container">
-    <div class="">
-      <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">{{ $title }}</h1>
-        <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-        <div class="divider"></div>
-      </div>
-      <div class="mt-60">
-        {{- range $features }}
-        <article class="media icon-box">
-          <figure class="media-left">
-            <p class="image">
-              <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </p>
-          </figure>
-          <div class="media-content mt-20">
-            <div class="content">
-              <p>
-                <span style="margin-bottom: 1rem;" class="icon-box-title">{{ .title }}</span>
-                <span class="icon-box-text">{{ .text | markdownify }}</span>
-              </p>
-              {{range .bullets}}
-              <ul>
-                <li>{{ . }}</li>
-              </ul>
-              {{end}}
-
-            
-          
-            </div>
-          </div>
-        </article>
-        {{- end }}
-        
-      </div>
+    <div class="column is-centered-tablet-portrait">
+      <h1 class="title section-title">{{ $title }}</h1>
+      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <div class="divider"></div>
+    </div>
+    <div class="column">
+      <p class="icon-box-text subtitle is-5">Quantum Finance is a research based studio that specializes in Web3 Technologies. We design & build NFT marketplaces, decentralized autonomous organizations (DAOs) and other smart contract primitives. The company was founded by a team of developers and economists who are passionate about Open financial and social systems. We work closely with clients to develop innovative blockchain-based solutions. The team's expertise includes FinTech & Payment Gateways, Web3 Integrations, Trading, Automated Market Makers, DAO design & Implementation, NFT monetization strategies, software architecture, and token engineering.</p>
     </div>
   </div>
 </section>
