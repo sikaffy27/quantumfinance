@@ -87,6 +87,22 @@ img.pushed-image {
     }
 }
 
+.about_us_image{
+    flex: 0.5;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.container_inner{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 470px){
     .media.icon-box {
         flex-direction: column;
