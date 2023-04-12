@@ -6,8 +6,8 @@ const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
   branch,
-  clientId: null,
-  token: null,
+  clientId: "a4718814-fba4-40a1-9a95-c225a961aa1e",
+  token: "02f5823e66279f5090626dbada57abbac05b4cf1",
   client: { skip: true },
   build: {
     outputFolder: "admin",
