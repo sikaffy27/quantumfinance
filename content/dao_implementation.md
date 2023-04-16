@@ -1,6 +1,6 @@
 ---
 title: DAO Implementation
-url: 'https://www.quantumfinance.consulting/daoimplementation'
+url: '/daoimplementation'
 enable_prefooter_cta: true
 enable_prefooter_default_content: true
 prefooter_button_link: Learn more

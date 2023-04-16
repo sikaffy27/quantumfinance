@@ -7419,10 +7419,6 @@ section.team div {
   .team-description {
     padding-top: 1rem; } }
 
-@media (max-width: 850px) {
-  .container {
-    padding: 0 2rem; } }
-
 @media (max-width: 600px) {
   .team {
     padding: 3rem 1rem; }

@@ -28,7 +28,7 @@ params:
     - '630'
   hero:
     title: Quantum Finance
-    subtitle: Web3 education & project development
+    subtitle: Web3 Education & Project Development
     buttontext: Start your web3 journey
     buttonlink: "#Start-your-web3-journey!"
     image: "/image_10.jpeg"

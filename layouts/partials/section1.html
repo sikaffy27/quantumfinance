@@ -2,6 +2,26 @@
 {{- $title    := index $section1 "title" }}
 {{- $subtitle := index $section1 "subtitle" }}
 {{- $tiles    := index $section1 "tiles" }}
+
+<style>
+  .my-columns{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  @media screen and (max-width: 1100px) {
+    .my-columns{
+      grid-template-columns: repeat(2,1fr);
+    }    
+  }
+
+  @media screen and (max-width: 700px) {
+    .my-columns{
+      grid-template-columns: repeat(1,1fr);
+    }    
+  }
+</style>
+
 <section id="get-started" class="section section-feature-grey-dark is-medium">
   <div class="container-fluid">
     <div class="title-wrapper has-text-centered">
@@ -11,9 +31,9 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="columns card-flow">
+      <div class="my-columns card-flow">
         {{- range $tiles }}
-        <div class="column ">
+        <div class="column">
           <div class="bg-black feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
             <div class="card-title">
               <h4 class="txt-white">{{ .title }}</h4>
