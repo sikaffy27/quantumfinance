@@ -6452,6 +6452,14 @@ html, body {
 .bg-single {
   background-color: #effffc; }
 
+.taglines {
+  display: flex;
+  gap: 1rem;
+  margin-left: .5rem;
+  margin-top: .3rem; }
+  .taglines .tagline {
+    font-size: 1.1rem; }
+
 @media (max-width: 470px) {
   .hero-single h1 {
     font-size: 1.9rem; } }

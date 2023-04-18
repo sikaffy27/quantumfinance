@@ -28,6 +28,11 @@ params:
     - '630'
   hero:
     title: Quantum Finance
+    tagline:
+    - DeFi Education
+    - Web3 Integrations
+    - CTO As A Service
+    - Digital Ads and Traffic
     subtitle: Web3 Education & Project Development
     buttontext: Start your web3 journey
     buttonlink: "#Start-your-web3-journey!"
@@ -89,7 +94,8 @@ params:
     - title: 'DAO Design & Implementation'
       icon: mouse-globe
       text: We deploy smart contracts to automate the process of managing membership, responsibilities and liquidity in a decentralized autonomous organization (DAO).
-      url: ""
+      url: "/dao-design-implementation"
+      buttonText: Learn More
   section2:
     title: You're here because you want the best guidance possible
     subtitle: 'shorten your Web3 learning curve '

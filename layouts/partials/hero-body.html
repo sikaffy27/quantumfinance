@@ -4,21 +4,32 @@
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image := index $hero "image" }}
+{{- $tagline := index $hero "tagline"}}
 
 <div class="hero-body"
   style="background: url('/images/banner.jpeg') center; background-size:cover; background-repeat: no-repeat;">
   <div class="banner-overlay">
-    <div class="hero-container height-100">
+    <div class="hero-container height-100" style="margin-left: 2rem;">
       <div class="columns is-vcentered height-100">
         <div class="column landing-caption">
-          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced">
+          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced" >
             {{ $title }}
           </h1>
+
           {{ with $subtitle }}
-          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted">
+          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted" style="margin-bottom: 0; margin-left: .5rem;">
             {{ . }}
           </h2>
           {{ end }}
+
+          <div class="taglines">
+            {{- range $tagline }}
+              <h2 class="tagline subtitle is-5 is-1 is-size-4-mobile is-muted">
+                {{ . }}
+              </h2>
+            {{ end }}
+          </div>
+
           <p>
             <a class="button is-rounded cta primary-btn raised bg-green" href=""
               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
