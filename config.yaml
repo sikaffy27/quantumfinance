@@ -28,11 +28,6 @@ params:
     - '630'
   hero:
     title: Quantum Finance
-    tagline:
-    - DeFi Education
-    - Web3 Integrations
-    - CTO As A Service
-    - Digital Ads and Traffic
     subtitle: Web3 Education & Project Development
     buttontext: Start your web3 journey
     buttonlink: "#Start-your-web3-journey!"
@@ -65,7 +60,7 @@ params:
       text: Set up a significant passive income source by contributing to network
         security
       url: https://www.quantumfinance.consulting/miningsetupservice/
-      buttonText: learn more
+      buttonText: Learn More
     - title: Crypto Consultation service
       icon: laptop-cloud
       text: 1 on 1 sessions can address topics like how to buy an NFT, recover a lost
@@ -90,7 +85,7 @@ params:
       text: We specialize in advanced technologies, including cyber security, cloud
         application management, supply chain management, IT, and all things Blockchain.
       url: "/technology-consulting"
-      buttonText: consult
+      buttonText: Consult
     - title: 'DAO Design & Implementation'
       icon: mouse-globe
       text: We deploy smart contracts to automate the process of managing membership, responsibilities and liquidity in a decentralized autonomous organization (DAO).
@@ -98,7 +93,7 @@ params:
       buttonText: Learn More
   section2:
     title: You're here because you want the best guidance possible
-    subtitle: 'shorten your Web3 learning curve '
+    subtitle: 'Shorten your Web3 learning curve '
     features:
     - title: DeFi mastery course
       text: 'Quantum Finance offers a cryptocurrency investing course for individuals
@@ -203,7 +198,7 @@ params:
     buttonLink: "#"
   section4:
     title: Testimonials
-    subtitle: take a look at what our clients have to say
+    subtitle: Take a look at what our clients have to say
     clients:
     - name: Patrick Kennedy
       quote: Their hand on web3 course and access to academic material allowed me

@@ -6,7 +6,7 @@
   <div class="container">
 
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2 has-text-black is-spaced">{{ $title }}</h2>
+      <h2 class="title is-2 has-text-black is-spaced" style="font-family: 'AvenirNext';">{{ $title }}</h2>
       <div class="divider is-centered"></div>
     </div>
 
@@ -15,12 +15,12 @@
         {{- range $clients }}
         <div class="column is-4">
           <figure class="quotes">
-            <blockquote>
+            <blockquote style="font-family: 'AvenirNext';">
               {{ .quote }}
             </blockquote>
             <div class="author">
-              <h5>{{ .name }}</h5>
-              <span class="has-text-black">{{ .job }}</span>
+              <h5 style="font-family: 'AvenirNext';">{{ .name }}</h5>
+              <span class="has-text-black" style="font-family: 'AvenirNext';">{{ .job }}</span>
             </div>
           </figure>
         </div>

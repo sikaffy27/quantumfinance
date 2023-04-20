@@ -12,26 +12,18 @@
     <div class="hero-container height-100" style="margin-left: 2rem;">
       <div class="columns is-vcentered height-100">
         <div class="column landing-caption">
-          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced" >
+          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced" style="margin-bottom: .5rem; font-family: 'AvenirNext';">
             {{ $title }}
           </h1>
 
           {{ with $subtitle }}
-          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted" style="margin-bottom: 0; margin-left: .5rem;">
+          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted" style="margin-bottom: 0; margin-left: .5rem; margin-bottom: 1rem;font-family: 'AvenirNext';">
             {{ . }}
           </h2>
           {{ end }}
 
-          <div class="taglines">
-            {{- range $tagline }}
-              <h2 class="tagline subtitle is-5 is-1 is-size-4-mobile is-muted">
-                {{ . }}
-              </h2>
-            {{ end }}
-          </div>
-
-          <p>
-            <a class="button is-rounded cta primary-btn raised bg-green" href=""
+          <p >
+            <a class="button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
               {{ $buttonText }}
             </a>

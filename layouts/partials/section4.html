@@ -6,9 +6,9 @@
   <div class="container">
 
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2 has-text-black is-spaced">{{ $title }}</h2>
+      <h2 class="title is-2 has-text-black is-spaced" style="font-family: 'AvenirNext'; margin-bottom: .2rem;">{{ $title }}</h2>
       {{- with $subtitle }}
-      <h3 class="subtitle is-5 has-text-black">{{ . }}</h3>
+        <h3 class="subtitle is-5" style="color: #999">{{ . }}</h3>
       {{- end }}
     </div>
 
@@ -21,13 +21,13 @@
               <li class="splide__slide">
                 <div class="mb-50">
                   <figure class="testimonial">
-                    <blockquote>
+                    <blockquote style="font-family: 'AvenirNext'">
                       {{ .quote }}s
                     </blockquote>
                     <div class="author">
                       <img src="{{ .img }}" alt=""/>
                       <div>
-                        <h5>{{ .name }}</h5>
+                        <h5 style="font-family: 'AvenirNext'">{{ .name }}</h5>
                         <span>{{ .job }}</span>
                       </div>
                     </div>

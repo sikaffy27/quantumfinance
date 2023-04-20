@@ -29,13 +29,13 @@
           {{- range $navbar }}
           {{- if .sublinks }}
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
+            <a class="navbar-link" style="font-family: 'AvenirNext';">
               {{ .title }}
             </a>
 
             <div class="navbar-dropdown">
               {{- range .sublinks }}
-              <a href="{{ .url }}" class="navbar-item">
+              <a href="{{ .url }}" class="navbar-item" style="font-family: 'AvenirNext';">
                 {{ .title }}
               </a>
               {{- end }}
@@ -43,12 +43,12 @@
           </div>
           {{- else if .button }}
           <a href="{{ .url }}" class="navbar-item">
-            <span class="button signup-button rounded secondary-btn raised">
+            <span class="button signup-button rounded secondary-btn raised" style="font-family: 'AvenirNext';">
               {{ .title }}
             </span>
           </a>
           {{- else }}
-          <a href="{{ .url }}" class="navbar-item is-secondary">
+          <a href="{{ .url }}" class="navbar-item is-secondary" style="font-family: 'AvenirNext';">
             {{ .title }}
           </a>
           {{- end }}

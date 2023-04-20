@@ -25,8 +25,8 @@
 <section id="get-started" class="section section-feature-grey-dark is-medium">
   <div class="container-fluid">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-uppercase is-size-3-mobile txt-white is-2">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <h2 class="title is-uppercase is-size-3-mobile txt-white is-2" style="font-family: 'AvenirNext';">{{ $title }}</h2>
+      <h3 class="subtitle is-5 is-muted" style="font-family: 'AvenirNext';">{{ $subtitle }}</h3>
       <div class="divider is-centered"></div>
     </div>
 
@@ -36,13 +36,13 @@
         <div class="column">
           <div class="bg-black feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
             <div class="card-title">
-              <h4 class="txt-white">{{ .title }}</h4>
+              <h4 class="txt-white" style="font-family: 'AvenirNext';">{{ .title }}</h4>
             </div>
             <!-- <div class="card-icon">
                 <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
             </div> -->
             <div class="card-text">
-                <p>{{ .text }}</p>
+                <p style="font-family: 'AvenirNext';">{{ .text }}</p>
             </div>
 
             {{ if .url }}
