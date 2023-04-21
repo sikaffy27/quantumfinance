@@ -4,6 +4,24 @@
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
 {{- $socialMediaTitle    := index $footer "socialmediatitle" }}
+{{- $ContactText := index $quickLinks "column2.links"}}
+
+<style>
+  .callUsBtn{
+    background-color: #E09900;
+    max-width: fit-content;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #FFF;
+    font-family: 'AvenirNext';
+    padding: .5rem 1rem;
+    cursor: pointer;
+  }
+</style>
+
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
@@ -30,6 +48,23 @@
           </div>
         </div>
       {{- end }}
+
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>&nbsp;</h3>
+          </div>
+          <ul class="link-list">
+            <li style="display: flex; flex-direction: column; gap: .5rem;">
+              <a href="">
+                Contact Us
+              </a>
+              <button class="callUsBtn">Call Us Now</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="column">
         <div class="footer-column">
           <div class="footer-header">

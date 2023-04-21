@@ -1,7 +1,7 @@
 <section class="section-dark-gray prefooter-cta">
     {{$defCon := .Params.enable_prefooter_default_content }}    
-    <span class="is-size-4 is-size-6-mobile"  >{{if $defCon }}Ready to start you crypto journey? <br> Book a session with our team{{else}}{{.Params.prefooter_cta_text | markdownify }}{{end}}</span>
-    <a class="button button is-rounded cta primary-btn raised" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">{{if $defCon }}Start Here{{else}}{{.Params.prefooter_button_cta | markdownify}}{{end}}</a>
+    <span class="is-size-4 is-size-6-mobile" style="font-family: 'AvenirNext';" >{{if $defCon }}Ready to start you crypto journey? <br> Book a session with our team{{else}}{{.Params.prefooter_cta_text | markdownify }}{{end}}</span>
+    <a class="button button is-rounded cta primary-btn raised" style="font-family: 'AvenirNext';" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">{{if $defCon }}Start Here{{else}}{{.Params.prefooter_button_cta | markdownify}}{{end}}</a>
     <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
