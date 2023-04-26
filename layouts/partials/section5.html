@@ -1,9 +1,17 @@
 {{$interestTitle := .Site.Params.form.interest.title}}
 {{$interest := .Site.Params.form.interest.options}}
+
+<style>
+  .send-btn{
+    padding: 1rem !important;
+    font-size: .8rem !important;
+  }
+</style>
+
 <section id="contact" class="section section-feature-grey-dark is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
-      <h2 class="txt-white title is-2 is-spaced" style="font-family: 'AvenirNext';">Drop us a line or two </h2>
+      <h2 class="txt-white title is-2 is-spaced section-title" style="font-family: 'AvenirNext';">Drop us a line or two </h2>
       <h3 class="subtitle is-5 is-muted" style="font-family: 'AvenirNext';">We'd love to hear from you</h3>
       <div class="divider is-centered"></div>
     </div>
@@ -31,7 +39,7 @@
                 <textarea name="message" required class="textarea" rows="10" placeholder="Write someting..."></textarea>
               </div>
               <div class="form-footer has-text-centered mt-10">
-                <button class="button cta is-large primary-btn raised is-clear" style="font-family: 'AvenirNext';">Send Message</button>
+                <button class="button cta is-large primary-btn raised is-clear send-btn" style="font-family: 'AvenirNext';">Send Message</button>
               </div>
             </div>
           </form>
