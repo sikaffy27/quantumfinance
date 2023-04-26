@@ -4,56 +4,93 @@
 {{- $tiles    := index $section1 "tiles" }}
 
 <style>
-  .my-columns{
+  .card-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    margin-top: 5rem;
+    place-items: center;
+    row-gap: 3rem;
+  }
+
+  .card{
+    background-color: #000;
+    color: #fff;
+    padding: 1.3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 300px;
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-title h4{
+    font-family: 'AvenirNext';
+    font-size: 1.2rem;
+  }
+
+  .card-body p{
+    font-family: 'AvenirNext';
+    font-size: 1rem;
+    color: #999;
   }
 
   @media screen and (max-width: 1100px) {
-    .my-columns{
+    .card-container{
       grid-template-columns: repeat(2,1fr);
     }    
   }
 
   @media screen and (max-width: 700px) {
-    .my-columns{
+    .card-container{
       grid-template-columns: repeat(1,1fr);
     }    
+  }
+
+  @media screen and (max-width: 560px) {
+    .card-container{
+      margin-top: 3rem;
+    }
+    
+    .section1-title{
+      font-size: 1.5rem !important;
+    }
+
+    .section1-subtitle{
+      font-size: 1.1rem !important;
+    }
   }
 </style>
 
 <section id="get-started" class="section section-feature-grey-dark is-medium">
   <div class="container-fluid">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-uppercase is-size-3-mobile txt-white is-2" style="font-family: 'AvenirNext';">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted" style="font-family: 'AvenirNext';">{{ $subtitle }}</h3>
+      <h2 class="section1-title title is-uppercase is-size-3-mobile txt-white is-2" style="font-family: 'AvenirNext';">{{ $title }}</h2>
+      <h3 class="section1-subtitle subtitle is-5 is-muted" style="font-family: 'AvenirNext';">{{ $subtitle }}</h3>
       <div class="divider is-centered"></div>
     </div>
 
-    <div class="content-wrapper">
-      <div class="my-columns card-flow">
-        {{- range $tiles }}
-        <div class="column">
-          <div class="bg-black feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4 class="txt-white" style="font-family: 'AvenirNext';">{{ .title }}</h4>
-            </div>
-            <!-- <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </div> -->
-            <div class="card-text">
-                <p style="font-family: 'AvenirNext';">{{ .text }}</p>
-            </div>
-
-            {{ if .url }}
-              <div class="card-action">
-                <a href="{{ .url }}" class="is-rounded txt-black button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-              </div>
-            {{ end }}
+    <div class="card-container">
+      {{- range $tiles }}
+        <div class="card">
+          <div class="card-title">
+            <h4>{{ .title }}</h4>
           </div>
+
+          <div class="card-body">
+            <p>{{ .text }}</p>
+          </div>
+
+          {{ if .url}}
+            <div class="card-btn">
+              <a href="{{ .url }}" class="button accent-btn is-rounded txt-black raised">{{ .buttonText }}</a>
+            </div>
+          {{ end }}
         </div>
-        {{- end }}
-      </div>
+      {{- end }}
     </div>
   </div>
 </section>
