@@ -40,21 +40,21 @@
   }
 
   @media screen and (max-width: 560px) {
+    .hero-title{
+      font-size: 1.5rem;
+    }
+
     .hero-subtitle{
-      /* font-size: 1.2rem; */
+      font-size: .8rem;
       max-width: 30ch;
       text-align: center;
     }
-  }
 
-  @media screen and (max-width: 460px) {
-    .hero-title{
-      font-size: 2.5rem;
-    }
-
-    .hero-subtitle{
-      /* max-width: 20ch; */
-      text-align: center;
+    .hero-btn{
+      font-size: .8rem !important;
+      padding: 1rem !important;
+      font-family: 'AvenirNext' !important;
+      border: none !important;
     }
   }
 </style>
@@ -72,8 +72,8 @@
       </h2>
       {{ end }}
 
-      <p >
-        <a class="button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
+      <p>
+        <a class="hero-btn button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
           {{ $buttonText }}
         </a>
