@@ -4,19 +4,54 @@
 <style>
   .logo-container{
     max-width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
+  }
+
+  .scroll-container{
+    overflow-x: scroll;
+    display: flex;
+  }
+
+  .scroll-container ul{
+    display: flex;
+    gap: 3rem;
+  }
+
+  .logo-item{
+    display: flex;
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-item img{
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 560px) {
+    .logo-container{
+      margin: 15px 20px;
+      max-width: 100%;
+    }
+
+    .logo-container ul{
+      gap: 1.5rem;
+    }
+
+    .logo-item{
+      width: 50px;
+      height: 50px;
+    }
   }
 </style>
 
-<div class="hero-foot mt-40 mb-40">
+<div class="hero-foot">
   <div class="logo-container">
-    <div class="tabs is-centered">
-      <ul style="border: none; gap: 5rem;">
+    <div class="scroll-container">
+      <ul>
         {{- range $clientLogos }}
-          <li>
-            <a>
-              <img class="partner-logo" src="{{ printf "/images/logos/clients/%s" . | relURL }}">
-            </a>
+          <li class="logo-item">
+            <img src="{{ printf "/images/logos/clients/%s" . | relURL }}">
           </li>
         {{- end }}
       </ul>
