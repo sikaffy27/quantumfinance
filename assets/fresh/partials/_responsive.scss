@@ -3,7 +3,6 @@ Responsive Styles
 ========================================================================== */
 
 @media (max-width: 767px) {
-
     .landing-caption {
         text-align: center;
     }
@@ -25,9 +24,6 @@ Responsive Styles
         .navbar-link {
             padding: 10px 20px !important;
         }
-    }
-    .title.section-title {
-        font-size: 2rem !important;
     }
     .level-left.level-social {
         display: flex;
