@@ -6,35 +6,83 @@
 {{- $image := index $hero "image" }}
 {{- $tagline := index $hero "tagline"}}
 
-<div class="hero-body"
-  style="background: url('/images/banner.jpeg') center; background-size:cover; background-repeat: no-repeat;">
+<style>
+  .main-container{
+    max-width: fit-content;
+    margin: 3.5rem 0 0 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .hero-title{
+    font-size: 3rem;
+    color: #FFF;
+    font-family: 'AvenirNext';
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .hero-subtitle{
+    font-family: 'AvenirNext';
+    font-size: 1.2rem;
+    color: #00fdcf;
+    line-height: 2;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .main-container{
+      max-width: inherit;
+      text-align: center;
+      margin-left: 0;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .hero-subtitle{
+      /* font-size: 1.2rem; */
+      max-width: 30ch;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    .hero-title{
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle{
+      /* max-width: 20ch; */
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="hero-body" style="background: url('/images/banner.jpeg') center; background-size:cover; background-repeat: no-repeat;">
   <div class="banner-overlay">
-    <div class="hero-container height-100" style="margin-left: 2rem;">
-      <div class="columns is-vcentered height-100">
-        <div class="column landing-caption">
-          <h1 class="title is-1 is-size-1-mobile is-bold is-spaced" style="margin-bottom: .5rem; font-family: 'AvenirNext';">
-            {{ $title }}
-          </h1>
+    <div class="main-container">
+      <h1 class="hero-title">
+        {{ $title }}
+      </h1>
 
-          {{ with $subtitle }}
-          <h2 class="subtitle is-5 is-1 is-size-4-mobile is-muted" style="margin-bottom: 0; margin-left: .5rem; margin-bottom: 1rem;font-family: 'AvenirNext';">
-            {{ . }}
-          </h2>
-          {{ end }}
+      {{ with $subtitle }}
+      <h2 class="hero-subtitle">
+        {{ . }}
+      </h2>
+      {{ end }}
 
-          <p >
-            <a class="button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
-              {{ $buttonText }}
-            </a>
+      <p >
+        <a class="button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
+          {{ $buttonText }}
+        </a>
 
-            <!-- Calendly link widget begin -->
-            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-            <!-- Calendly link widget end -->
-          </p>
-        </div>
-      </div>
+        <!-- Calendly link widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <!-- Calendly link widget end -->
+      </p>
     </div>
   </div>
 </div>

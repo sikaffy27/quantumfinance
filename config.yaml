@@ -28,18 +28,21 @@ params:
     - '630'
   hero:
     title: Quantum Finance
-    subtitle: Web3 Education & Project Development
+    subtitle: Custom Software,Web3 Integrations & Digital Ads
     buttontext: Start your web3 journey
     buttonlink: "#Start-your-web3-journey!"
     image: "/image_10.jpeg"
     clientlogos:
-    - bitcoin
-    - ethereum
-    - iota777
-    - binance
-    - cardano
-    - chainlink
-    - xrp
+    - bitcoin.svg
+    - ethereum.svg
+    - iota777.svg
+    - fantom.jpeg
+    - binance.svg
+    - cardano.svg
+    - apeCoin.jpeg
+    - chainlink.svg
+    - heliumCoin.jpeg
+    - xrp.svg 
   navbar:
   - title: DeFi Education
     url: "/cryptocurrency-investing-course"
@@ -91,6 +94,13 @@ params:
       text: We deploy smart contracts to automate the process of managing membership, responsibilities and liquidity in a decentralized autonomous organization (DAO).
       url: "/dao-design-implementation"
       buttonText: Learn More
+  
+  techStack:
+    title: Experts Building On Technologies Using
+    techLogos:
+      - react
+      - nodejs
+      - Solidity
   section2:
     title: You're here because you want the best guidance possible
     subtitle: 'Shorten your Web3 learning curve '
@@ -302,7 +312,7 @@ params:
     socialmedia:
     - link: https://medium.com/@quantumfinance
       icon: 'medium'
-    - link: https://t.me/fixpoint
+    - link: https://t.me/quantumfinanc3
       icon: 'telegram'
     - link: https://github.com/crazydevlegend
       icon: 'github'

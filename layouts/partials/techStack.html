@@ -1,0 +1,40 @@
+{{- $techStack := .Site.Params.techStack }}
+{{- $techLogos    := index $techStack "techLogos" }}
+{{- $title := index $techStack "title"}}
+
+<style>
+    .techStack-container{
+         padding: 5rem 0;
+         background-color: rgba(225,238,242);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 3rem;
+    }
+
+    .techStack-container > header{
+        font-family: 'AvenirNext';
+        font-size: 1.3rem;
+        color: #363636;
+        line-height: 1.25;
+    }
+
+    .tech-logo{
+        height: 100px;
+    }
+</style>
+
+<div class="techStack-container">
+    <header>{{$title}}</header>
+    <div class="tabs is-centered">
+        <ul style="border: none; gap: 5rem;">
+            {{- range $techLogos }}
+            <li>
+                <a>
+                    <img class="tech-logo" src="{{ printf "/images/techStack/%s.png" . | relURL }}">
+                </a>
+            </li>
+            {{end}}
+        </ul>
+    </div>
+</div>

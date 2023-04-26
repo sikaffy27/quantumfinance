@@ -1,15 +1,23 @@
 {{- $hero        := .Site.Params.hero }}
 {{- $clientLogos := index $hero "clientlogos" }}
+
+<style>
+  .logo-container{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+</style>
+
 <div class="hero-foot mt-40 mb-40">
-  <div class="container">
+  <div class="logo-container">
     <div class="tabs is-centered">
-      <ul>
+      <ul style="border: none; gap: 5rem;">
         {{- range $clientLogos }}
-        <li>
-          <a>
-            <img class="partner-logo" src="{{ printf "/images/logos/clients/%s.svg" . | relURL }}">
-          </a>
-        </li>
+          <li>
+            <a>
+              <img class="partner-logo" src="{{ printf "/images/logos/clients/%s" . | relURL }}">
+            </a>
+          </li>
         {{- end }}
       </ul>
     </div>
