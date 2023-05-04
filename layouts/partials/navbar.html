@@ -1,59 +1,170 @@
-{{- $navbar         := .Site.Params.navbar }}
+{{- $navbar := .Site.Params.navbar }}
 {{- $sidebarVisible := .Site.Params.sidebar }}
 {{ if .Params.sidebar }}
 {{ $sidebarVisible = .Params.sidebar }}
 {{ end }}
-{{- $navbarLogo     := .Site.Params.navbarlogo }}
-<nav class="navbar bg-black  is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand">
-      {{- if $navbarLogo}}
-      <a class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="" >
-        <!-- <h3 class="navbarLogoText" style="width:112; height:28;"> {{ printf "%s" $navbarLogo.text }} </h3> -->
-      </a>
-      {{- end }}
-     
+{{- $navbarLogo := .Site.Params.navbarlogo }}
 
-      <a role="button" class="navbar-burger txt-white" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+<style>
+  body{
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .navbar-main{
+    padding: .7rem 5rem;
+    background-color: #000;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
+  .navbar-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-logo-container img{
+    height: 36px;
+    width: 175px;
+  }
+
+  .menu-btn {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+  .menu-btn:active{
+    background-color: #fff;
+  }
+
+  .menu-btn:active i{
+    color: #000;
+  }
+
+  .menu-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    clip-path: circle(0px at calc(100% - 10px) 45px);
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-screen ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .nav-item{
+    color: #FFF;
+    font-family: 'AvenirNextBold';
+    font-size: 1.1rem;
+    text-align: center;
+    padding: .5rem 1.5rem;
+    overflow: hidden;
+  }
+
+  .nav-item:hover{
+    background-color: #FFF;
+    color: #000;
+    border-radius: 999999px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .menu-btn:hover{
+      background-color: #fff;
+    }
+
+    .menu-btn:hover i{
+      color: #000;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .navbar-main{
+      padding: .7rem 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .navbar-main{
+      padding: .7rem 1rem;
+    }
+  }
+
+</style>
+
+<script>
+  let isMenuOpen = false;
+
+  const showMenuScreen = () => {
+    const menu_screen = document.querySelector('.menu-screen');
+    const menu_btn = document.querySelector('.menu-btn');
+
+    if(!isMenuOpen){
+      menu_screen.style.clipPath = 'circle(75%)';
+      menu_screen.style.zIndex = '100';
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '100vh';
+
+      menu_btn.style.position = "relative";
+      menu_btn.style.zIndex = '101';
+      menu_btn.querySelector('i').classList.remove('fa-bars');
+      menu_btn.querySelector('i').classList.add('fa-close')
+      isMenuOpen = true;
+    }else{
+      menu_screen.style.clipPath = 'circle(0px at calc(100% - 45px) 45px)';
+      menu_screen.style.zIndex = '-1';
+      document.body.style.overflow = 'visible';
+      document.body.style.maxHeight = 'none';
+
+      menu_btn.style.position = "static";
+      menu_btn.querySelector('i').classList.remove('fa-close');
+      menu_btn.querySelector('i').classList.add('fa-bars')
+      isMenuOpen = false;
+    }
+    console.log(menu_screen)
+  }
+</script>
+
+<nav class="navbar-main">
+  <div class="navbar-container">
+    <a class="navbar-logo-container" href="/">
+      <img src="/images/logos/qa-wide.png" alt="Quantum Finance Logo">
+    </a>
+
+    <button class="menu-btn" onclick="showMenuScreen()"><i class="fas fa-bars"></i></button>
+
+    <div class="menu-screen">
+      <ul>
+        {{- range $navbar}}
+          <a href="{{ .url }}" class="nav-item">
+            {{.title}}
+          </a>
+        {{- end}}
+      </ul>
     </div>
-
-      <div id="navbar-menu" class="navbar-menu bg-black is-static">
-  
-
-        <div class="navbar-end">
-          {{- range $navbar }}
-          {{- if .sublinks }}
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" style="font-family: 'AvenirNext';">
-              {{ .title }}
-            </a>
-
-            <div class="navbar-dropdown">
-              {{- range .sublinks }}
-              <a href="{{ .url }}" class="navbar-item" style="font-family: 'AvenirNext';">
-                {{ .title }}
-              </a>
-              {{- end }}
-            </div>
-          </div>
-          {{- else if .button }}
-          <a href="{{ .url }}" class="navbar-item">
-            <span class="button signup-button rounded secondary-btn raised" style="font-family: 'AvenirNext';">
-              {{ .title }}
-            </span>
-          </a>
-          {{- else }}
-          <a href="{{ .url }}" class="navbar-item is-secondary" style="font-family: 'AvenirNext';">
-            {{ .title }}
-          </a>
-          {{- end }}
-          {{- end }}
-        </div>
-      </div>
   </div>
 </nav>

@@ -1,3 +1,16 @@
+<style>
+  @media screen and (max-width: 700px) {
+    .section-title{
+      margin-left: 1rem;
+    }
+
+    .content{
+      padding: 1rem;
+      text-align: justify;
+    }
+  }
+</style>
+
 <div class="bg-single">  
   <div class="hero-single is-centered-tablet-portrait">
     <div class="circle-bg"></div>
@@ -6,11 +19,9 @@
     <div class="divider"></div>
   </div>
   
-  <div class="">
-    <section class="container bg-single">
-      <div class="content">
-        {{ .Content }}
-      </div>
-    </section>
-  </div>
+  <section class="container bg-single">
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </section>
 </div>

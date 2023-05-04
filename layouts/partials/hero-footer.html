@@ -10,10 +10,23 @@
   .scroll-container{
     overflow-x: scroll;
     display: flex;
+    justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .container::-webkit-scrollbar { 
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
   }
 
   .scroll-container ul{
     display: flex;
+    justify-content: center;
     gap: 3rem;
   }
 
