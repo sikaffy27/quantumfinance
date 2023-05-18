@@ -27,8 +27,7 @@ params:
     - '430'
     - '630'
   hero:
-    title: Quantum Finance
-    subtitle: Custom Software,Web3 Integrations & Digital Ads
+    title: Custom Software,Web3 Integrations & Digital Ads
     buttontext: Start your web3 journey
     buttonlink: "#Start-your-web3-journey!"
     image: "/image_10.jpeg"

@@ -27,9 +27,21 @@
     width: 100%;
   }
 
+  .navbar-logo-container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .navbar-logo-container img{
     height: 36px;
-    width: 175px;
+    width: 36px;
+  }
+
+  .navbar-logo-container span{
+    color: #FFF;
+    font-weight: 600;
+    font-family: 'Avenir Next', sans-serif;
   }
 
   .menu-btn {
@@ -152,10 +164,11 @@
 <nav class="navbar-main">
   <div class="navbar-container">
     <a class="navbar-logo-container" href="/">
-      <img src="/images/logos/qa-wide.png" alt="Quantum Finance Logo">
+      <img src="/images/logos/logo.png" alt="Quantum Finance Logo">
+      <span>Quantum Finance</span>
     </a>
 
-    <button class="menu-btn" onclick="showMenuScreen()"><i class="fas fa-bars"></i></button>
+    <button class="menu-btn" onclick="showMenuScreen()"><i class="fa-solid fa-bars" style="font-style: normal;"></i></button>
 
     <div class="menu-screen">
       <ul>
@@ -163,7 +176,7 @@
           <a href="{{ .url }}" class="nav-item">
             {{.title}}
           </a>
-        {{- end}}
+        {{- end}} 
       </ul>
     </div>
   </div>

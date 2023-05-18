@@ -7,75 +7,171 @@
 {{- $tagline := index $hero "tagline"}}
 
 <style>
-  .main-container{
+  .hero-container{
+    padding: 0;
+    min-height: 87vh;
+  }
+
+  .text-container{
     max-width: fit-content;
-    margin: 2.2rem 0 0 2.2rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    position: absolute;
+    top: 0;
+    left: 2.2rem;
+    background-color: rgba(0,0,0,0.6);
+    padding: 2rem;
   }
 
   .hero-title{
     font-size: 3rem;
     color: #FFF;
-    font-family: 'AvenirNext';
+    font-family: 'AvenirNext',sans-serif;
     font-weight: 700;
-    line-height: 1;
+    max-width: 400px;
+    line-height: 3rem;
   }
 
-  .hero-subtitle{
-    font-family: 'AvenirNext';
+  .hero-para{
+    max-width: 400px;
+    color: #fff;
     font-size: 1.2rem;
-    color: #00fdcf;
-    line-height: 2;
+    margin-top: 12px;
+  }
+
+  .widget-container{
+    position: absolute;
+    top: 32px;
+    right: 2.2rem;
+  }
+
+  .hero-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 269px;
+    height: 54px;
+    cursor: pointer;
+  }
+
+  .widget-container > div{
+    display: none !important;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .hero-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: fit-content;
+      z-index: -1;
+    }
+
+    .text-container{
+      position: relative;
+      inset: 0;
+      width: 100%;
+      max-width: 100%;
+      background-color: transparent;
+      z-index: 2;
+    }
+
+    .widget-container{
+      position: relative;
+      inset: 0;
+      z-index: 3;
+      width: 100%;
+      padding: 0 0 2rem 2rem;
+    }
+
+    .hero-bg-overlay{
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
   }
 
   @media screen and (max-width: 1024px) {
-    .main-container{
-      max-width: inherit;
-      text-align: center;
-      margin-left: 0;
+    .text-container{
+      max-width: 100%;
       align-items: center;
+    }
+
+    .hero-title,.hero-para{
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .hero-title{
+      font-size: 2rem;
+    }
+
+    .hero-para{
+      margin-top: 0;
+    }
+
+    .widget-container{
+      display: flex;
+      justify-content: center;
     }
   }
 
-  @media screen and (max-width: 560px) {
-    .hero-title{
-      font-size: 2.1rem;
+  @media screen and (max-width: 600px) {
+    .hero-container{
+      min-height: fit-content;
     }
 
-    .hero-subtitle{
-      font-size: 1rem;
-      max-width: 35ch;
-      text-align: center;
-      line-height: 1.4;
+    .text-container{
+      padding: 2rem 1rem;
+    }
+
+    .hero-title{
+      font-size: 1.4rem;
+      line-height: 30px;
+    }
+
+    .hero-para{
+      font-size: .9rem;
     }
 
     .hero-btn{
-      font-size: .95rem !important;
-      padding: 1rem !important;
-      font-family: 'AvenirNext' !important;
-      border: none !important;
-      margin-top: 1rem;
+      width: 269px;
+      height: 54px;
+    }
+
+    .widget-container{
+      padding: 0;
+      justify-content: inherit;
+      width: 100%;
+    }
+
+    .widget-container > div{
+      display: flex !important;
+      width: 100%;
+    }
+
+    .widget-container > iframe{
+      display: none;
+    }
+
+    .mobile-widget{
+      display: block;
     }
   }
 </style>
 
-<div class="hero-body" style="background: url('/images/banner.jpeg') center; background-size:cover; background-repeat: no-repeat;">
-  <div class="banner-overlay">
-    <div class="main-container">
+<div class="hero-container" style="background: url('/images/banner.jpeg') center; background-size:cover; background-repeat: no-repeat;position: relative;">
+    <div class="text-container">
       <h1 class="hero-title">
         {{ $title }}
       </h1>
 
-      {{ with $subtitle }}
-      <h2 class="hero-subtitle">
-        {{ . }}
-      </h2>
-      {{ end }}
+      <p class="hero-para">Our Fractional CTO solution can streamline your path to success. From Software Design and Fintech to Influencer Networks and Digital Advertising, we offer a comprehensive approach to help you build a Minimum Viable Product (MVP) and unleash the value of your data to find Product-Market Fit</p>
 
       <p>
-        <a class="hero-btn button is-rounded cta primary-btn raised bg-green" style="font-family: 'AvenirNextBold'; font-weight: bold;" href=""
+        <a class="hero-btn bg-green" style="font-family: 'AvenirNextBold',sans-serif; font-weight: bold;margin-top: 12px" href=""
           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
           {{ $buttonText }}
         </a>
@@ -86,5 +182,14 @@
         <!-- Calendly link widget end -->
       </p>
     </div>
-  </div>
+
+    <div class="widget-container">
+      <iframe title="Exolix widget" src="https://exolix.com/widget/BTC:BTC-ETH:ETH?a=1&locale=en&t=1uM6o93lLuWDyQEKwVbvPdXeK4uymmaPqTnUJlUWJUhKhT9m5gEYYG3xUS7dbSB1&s=white" width="560px" height="376px" frameBorder="0" scrolling="yes"></iframe>
+
+      <div style="display: flex;justify-content: center;align-items: center;margin: 2rem 1rem;">
+        <iframe id="stealthex-widget" src="https://stealthex.io/widget/de730cae-dcdf-42e6-9069-f1ac9134e64b" style="border: none; border-radius: 10px; overflow: hidden; width: 100%; max-width: 680px; height: 330px; box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.06)"></iframe>
+      </div>
+    </div>
+
+    <div class="hero-bg-overlay"></div>
 </div>
