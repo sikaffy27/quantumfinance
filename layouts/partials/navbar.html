@@ -10,6 +10,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  .hide{
+    display: none;
+  }
+
   .navbar-main{
     padding: .7rem 5rem;
     background-color: #000;
@@ -56,6 +60,10 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .menu-btn:active{
@@ -106,7 +114,7 @@
 
   @media screen and (min-width: 700px) {
     .menu-btn:hover{
-      background-color: #fff;
+      background-color: rgba(255, 255, 255,.3)
     }
 
     .menu-btn:hover i{
@@ -143,8 +151,8 @@
 
       menu_btn.style.position = "relative";
       menu_btn.style.zIndex = '101';
-      menu_btn.querySelector('i').classList.remove('fa-bars');
-      menu_btn.querySelector('i').classList.add('fa-close')
+      menu_btn.querySelector('.menu-icon').classList.add('hide')
+      menu_btn.querySelector('.close-icon').classList.remove('hide')
       isMenuOpen = true;
     }else{
       menu_screen.style.clipPath = 'circle(0px at calc(100% - 45px) 45px)';
@@ -153,8 +161,8 @@
       document.body.style.maxHeight = 'none';
 
       menu_btn.style.position = "static";
-      menu_btn.querySelector('i').classList.remove('fa-close');
-      menu_btn.querySelector('i').classList.add('fa-bars')
+      menu_btn.querySelector('.menu-icon').classList.remove('hide')
+      menu_btn.querySelector('.close-icon').classList.add('hide')
       isMenuOpen = false;
     }
     console.log(menu_screen)
@@ -168,7 +176,23 @@
       <span>Quantum Finance</span>
     </a>
 
-    <button class="menu-btn" onclick="showMenuScreen()"><i class="fa-solid fa-bars" style="font-style: normal;"></i></button>
+    <button class="menu-btn" onclick="showMenuScreen()">
+      <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero">
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <g transform="scale(5.12,5.12)">
+            <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+          </g>
+        </g>
+      </svg>
+      
+      <svg class="close-icon hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero">
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <g transform="scale(5.12,5.12)">
+            <path d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"></path>
+          </g>
+        </g>
+      </svg>
+    </button>
 
     <div class="menu-screen">
       <ul>

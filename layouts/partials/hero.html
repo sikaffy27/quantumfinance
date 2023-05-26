@@ -1,4 +1,26 @@
+<style>
+  .widget-container-mobile{
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .widget-container-mobile{
+      display: flex;
+      justify-content: center;
+      padding: 1.5rem 0;
+      margin: 0 auto;
+      background-color: #212121;
+      width: 100%;
+    }
+  }
+</style>
+
 <section class="hero is-default is-bold" style="position: relative;">
   {{ partial "hero-body.html" . }}
+  
+  <div class="widget-container-mobile">
+    <iframe title="Exolix widget" src="https://exolix.com/widget/BTC:BTC-ETH:ETH?a=1&locale=en&t=1uM6o93lLuWDyQEKwVbvPdXeK4uymmaPqTnUJlUWJUhKhT9m5gEYYG3xUS7dbSB1&s=white" width="315px" height="268px" frameBorder="0" scrolling="yes"></iframe>
+  </div>
+
   {{ partial "hero-footer.html" . }}
 </section>

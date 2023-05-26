@@ -40,7 +40,7 @@
     margin-top: 12px;
   }
 
-  .widget-container{
+  .widget-container-desktop{
     position: absolute;
     top: 32px;
     right: 2.2rem;
@@ -53,10 +53,6 @@
     width: 269px;
     height: 54px;
     cursor: pointer;
-  }
-
-  .widget-container > div{
-    display: none !important;
   }
 
   @media screen and (max-width: 1200px) {
@@ -77,7 +73,7 @@
       z-index: 2;
     }
 
-    .widget-container{
+    .widget-container-desktop{
       position: relative;
       inset: 0;
       z-index: 3;
@@ -112,7 +108,7 @@
       margin-top: 0;
     }
 
-    .widget-container{
+    .widget-container-desktop{
       display: flex;
       justify-content: center;
     }
@@ -128,7 +124,7 @@
     }
 
     .hero-title{
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       line-height: 30px;
     }
 
@@ -137,22 +133,24 @@
     }
 
     .hero-btn{
-      width: 269px;
-      height: 54px;
+      width: max-content;
+      height: max-content;
+      font-size: 12px;
+      padding: 1rem 1.5rem;
     }
 
-    .widget-container{
+    .widget-container-desktop{
       padding: 0;
       justify-content: inherit;
       width: 100%;
     }
 
-    .widget-container > div{
+    .widget-container-desktop > div{
       display: flex !important;
       width: 100%;
     }
 
-    .widget-container > iframe{
+    .widget-container-desktop > iframe{
       display: none;
     }
 
@@ -183,12 +181,8 @@
       </p>
     </div>
 
-    <div class="widget-container">
+    <div class="widget-container-desktop">
       <iframe title="Exolix widget" src="https://exolix.com/widget/BTC:BTC-ETH:ETH?a=1&locale=en&t=1uM6o93lLuWDyQEKwVbvPdXeK4uymmaPqTnUJlUWJUhKhT9m5gEYYG3xUS7dbSB1&s=white" width="560px" height="376px" frameBorder="0" scrolling="yes"></iframe>
-
-      <div style="display: flex;justify-content: center;align-items: center;margin: 2rem 1rem;">
-        <iframe id="stealthex-widget" src="https://stealthex.io/widget/de730cae-dcdf-42e6-9069-f1ac9134e64b" style="border: none; border-radius: 10px; overflow: hidden; width: 100%; max-width: 680px; height: 330px; box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.06)"></iframe>
-      </div>
     </div>
 
     <div class="hero-bg-overlay"></div>
