@@ -40,12 +40,6 @@
     margin-top: 12px;
   }
 
-  .widget-container-desktop{
-    position: absolute;
-    top: 32px;
-    right: 2.2rem;
-  }
-
   .hero-btn{
     display: flex;
     justify-content: center;
@@ -53,6 +47,7 @@
     width: 269px;
     height: 54px;
     cursor: pointer;
+    color: #000;
   }
 
   @media screen and (max-width: 1200px) {
@@ -71,14 +66,6 @@
       max-width: 100%;
       background-color: transparent;
       z-index: 2;
-    }
-
-    .widget-container-desktop{
-      position: relative;
-      inset: 0;
-      z-index: 3;
-      width: 100%;
-      padding: 0 0 2rem 2rem;
     }
 
     .hero-bg-overlay{
@@ -107,11 +94,6 @@
     .hero-para{
       margin-top: 0;
     }
-
-    .widget-container-desktop{
-      display: flex;
-      justify-content: center;
-    }
   }
 
   @media screen and (max-width: 600px) {
@@ -139,21 +121,6 @@
       padding: 1rem 1.5rem;
     }
 
-    .widget-container-desktop{
-      padding: 0;
-      justify-content: inherit;
-      width: 100%;
-    }
-
-    .widget-container-desktop > div{
-      display: flex !important;
-      width: 100%;
-    }
-
-    .widget-container-desktop > iframe{
-      display: none;
-    }
-
     .mobile-widget{
       display: block;
     }
@@ -169,7 +136,7 @@
       <p class="hero-para">Our Fractional CTO solution can streamline your path to success. From Software Design and Fintech to Influencer Networks and Digital Advertising, we offer a comprehensive approach to help you build a Minimum Viable Product (MVP) and unleash the value of your data to find Product-Market Fit</p>
 
       <p>
-        <a class="hero-btn bg-green" style="font-family: 'AvenirNextBold',sans-serif; font-weight: bold;margin-top: 12px" href=""
+        <a class="hero-btn bg-green" style="font-family: 'AvenirNextBold',sans-serif; font-weight: 100;margin-top: 12px" href=""
           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quantumfinance?hide_gdpr_banner=1'});return false;">
           {{ $buttonText }}
         </a>
@@ -179,10 +146,6 @@
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         <!-- Calendly link widget end -->
       </p>
-    </div>
-
-    <div class="widget-container-desktop">
-      <iframe title="Exolix widget" src="https://exolix.com/widget/BTC:BTC-ETH:ETH?a=1&locale=en&t=1uM6o93lLuWDyQEKwVbvPdXeK4uymmaPqTnUJlUWJUhKhT9m5gEYYG3xUS7dbSB1&s=white" width="560px" height="376px" frameBorder="0" scrolling="yes"></iframe>
     </div>
 
     <div class="hero-bg-overlay"></div>

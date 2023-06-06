@@ -87,16 +87,18 @@
     </div>    
     
     <script type="text/javascript">
-        window.onload = () => {
-            setTimeout(() => {
-                $("html").addClass("show-contact");
-            }, 8000);
+        if(window.innerWidth > 500){
+            window.onload = () => {
+                setTimeout(() => {
+                    $("html").addClass("show-contact");
+                }, 8000);
+            }
         }
 
         function myFunction() {
             var element = document.documentElement;
             element.classList.remove("show-contact");
-        } 
+        }
     </script> 
   
 {{ end }}
