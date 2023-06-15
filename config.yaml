@@ -97,7 +97,6 @@ params:
       text: We deploy smart contracts to automate the process of managing membership, responsibilities and liquidity in a decentralized autonomous organization (DAO).
       url: "/dao-design-implementation"
       buttonText: Learn More
-  
   techStack:
     title: Experts Building On Technologies Using
     techLogos:

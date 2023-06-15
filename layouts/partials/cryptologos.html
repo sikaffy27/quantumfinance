@@ -1,0 +1,73 @@
+{{- $hero        := .Site.Params.hero }}
+{{- $clientLogos := index $hero "clientlogos" }}
+
+<style>
+  .logo-container{
+    max-width: 80%;
+    margin: 40px auto;
+  }
+
+  .scroll-container{
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .container::-webkit-scrollbar { 
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
+  .scroll-container ul{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .logo-item{
+    display: flex;
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-item img{
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 560px) {
+    .logo-container{
+      margin: 25px 20px;
+      max-width: 100%;
+    }
+
+    .logo-container ul{
+      gap: 1.5rem;
+    }
+
+    .logo-item{
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>
+
+<div class="hero-foot">
+  <div class="logo-container">
+    <div class="scroll-container">
+      <ul>
+        {{- range $clientLogos }}
+          <li class="logo-item">
+            <img src="{{ printf "/images/logos/clients/%s" . | relURL }}">
+          </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+</div>
