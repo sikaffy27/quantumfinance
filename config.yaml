@@ -103,6 +103,8 @@ params:
       - react
       - nodejs
       - Solidity
+      - python
+      - postgresql
   section2:
     title: You're here because you want the best guidance possible
     subtitle: 'Shorten your Web3 learning curve '
