@@ -1,4 +1,4 @@
-# The Fresh theme for Hugo
+# The Fresh theme for Hugo APP
 
 [![Documentation](https://img.shields.io/badge/Documentation-red)](https://stefma.github.io/hugo-fresh) 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-blue)](https://hugo-fresh.vercel.app)
